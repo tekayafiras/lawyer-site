@@ -201,6 +201,8 @@ main .article-1{
 
 .article-1 img{
     max-height: 85%;
+    max-width: 100%;
+    margin: auto;
     
 }
 .article-1 .definition p{
@@ -622,7 +624,7 @@ main .article-6{
     .text .buttons a{
         margin: .2rem 0;
     }
-    .navbar .nav .open{
+    .navbar .nav .open,.navbar .nav .close{
         top: 30px;
         right: 10px;
     }
