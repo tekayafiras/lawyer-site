@@ -35,3 +35,15 @@ nav.addEventListener('click', e =>{
     currentbutton.classList.remove('current');
     targetbutton.classList.add('current');
 });
+
+
+const open = document.querySelector('.open');
+const close = document.querySelector('.close');
+
+open.addEventListener('click',function(){
+    document.querySelector('.mobile-menu').style.transform='translateX('+0;
+});
+
+close.addEventListener('click',function(){
+    document.querySelector('.mobile-menu').style.transform='translateX('+275+'px';
+})

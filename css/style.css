@@ -42,7 +42,7 @@ header{
     
     background: rgba(0, 0, 0, .60) url(../resources/main\ picture.jpg) no-repeat center center/cover;
     background-blend-mode: darken;
-    height: 120vh;
+    height: 110vh;
 }
 header .container{
     max-width: var(--width);
@@ -57,6 +57,7 @@ header .container .navbar .nav{
     display: flex;
     justify-content: space-between;
     padding-bottom: 12rem;
+    padding: 0 .7rem;
 }
 header .navbar ul{
     display: flex;
@@ -94,7 +95,7 @@ header .navbar a{
     background: transparent;
     border: 1px solid white;
 }
-.navbar .nav .open, .navbar .nav .close{
+.navbar .nav .open, .navbar .nav .close{                /*hamburger****/
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
@@ -116,6 +117,7 @@ header .navbar a{
 header .container .text{
     display: grid;
     grid-template-columns: 1.5fr 1fr;
+    margin-top:10rem;
 }
 .container .grid-text{
     display: flex;
@@ -458,12 +460,47 @@ main .article-6{
     border: 1px solid white;
 }
 
+@media(min-width : 801px){
+    .nav ul li ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgb(255, 255, 255,.9);
+        border-radius: 5px;
+        padding: 1rem 6rem 1rem 1rem;
+        position: absolute;color: black;
+        top: 180px;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+    }
+    .nav ul li:nth-child(3):hover ul{
+        top: 90px;
+        opacity: 1;
+    }
+    .nav ul li ul li{
+        color: black;
+        padding: .3rem ;
+    }
+    .nav ul li ul li:hover{
+        color: var(--blue);
+
+    }
+    .nav ul li ul a{
+        font-size: .9rem;
+        font-weight: 599;
+    }
+}
+
  /***** 1200px *****/
-@media(max-width:1200px){
+ @media(max-width:1200px){
     main .article-1,main .article-2,main .article-3,main .article-4,main .article-5,main .article-6{
         max-width: 95vw;
         margin: auto ;
     }
+    header .container .text{
+        margin-top:10rem;
+    }
+
 }
   /**** <800px *****/
   @media (max-width:800px){
@@ -490,7 +527,7 @@ main .article-6{
         padding-right: 1rem;
         min-width: 35vw;
         transform: translateX(275px);
-        transition: all .3s ease-in-out;
+        transition: all .35s ease-in-out;
     }
     header .navbar li{
         color: black;
@@ -511,11 +548,14 @@ main .article-6{
         justify-content: space-around;
         padding-bottom: 12rem;
     }
-    .navbar .nav .hamburger{
+    .navbar .nav .open,.navbar .nav .close{             /**hamburger*/
         display: block;
         position: absolute;
         top: 55px;
         right: 30px;
+    }
+    .close{
+        z-index: 2;
     }
     header .container .text{
         grid-template-columns: 1fr;
@@ -578,6 +618,13 @@ main .article-6{
     .text .buttons{
         display: flex;
         flex-direction: column;
+    }
+    .text .buttons a{
+        margin: .2rem 0;
+    }
+    .navbar .nav .open{
+        top: 30px;
+        right: 10px;
     }
     
 }
