@@ -631,6 +631,19 @@ main .article-6{
     
 }
 
+.hide{
+    transform: translateY(60px);
+    transition: all .4s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.show{
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
 
 
 

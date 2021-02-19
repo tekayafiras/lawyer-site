@@ -46,4 +46,38 @@ open.addEventListener('click',function(){
 
 close.addEventListener('click',function(){
     document.querySelector('.mobile-menu').style.transform='translateX('+275+'px';
-})
+});
+
+
+
+
+
+
+
+const items = document.querySelectorAll('.hide');
+
+const isInViewport = el => {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
+
+const run = () =>
+  items.forEach(item => {
+    if (isInViewport(item)) {
+        item.classList.add('show');  // ken element yodhher fil page yetzedlou l class "show"
+      }
+  });
+
+
+// Events
+window.addEventListener('load', run);
+window.addEventListener('resize', run);
+window.addEventListener('scroll', run);    // nzidou l class "show" fi css f element li nhebou aalih expl
+
+;
