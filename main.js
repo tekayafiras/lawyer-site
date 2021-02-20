@@ -39,13 +39,16 @@ nav.addEventListener('click', e =>{
 
 const open = document.querySelector('.open');
 const close = document.querySelector('.close');
+const mobileMenu = document.querySelector('.mobile-menu');
 
 open.addEventListener('click',function(){
-    document.querySelector('.mobile-menu').style.transform='translateX('+0;
+    mobileMenu.style.transform='translateX('+0;
+    
 });
 
 close.addEventListener('click',function(){
-    document.querySelector('.mobile-menu').style.transform='translateX('+275+'px';
+    mobileMenu.style.transform='translateX('+275+'px';
+    
 });
 
 

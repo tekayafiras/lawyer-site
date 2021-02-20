@@ -42,7 +42,7 @@ header{
     
     background: rgba(0, 0, 0, .60) url(../resources/main\ picture.jpg) no-repeat center center/cover;
     background-blend-mode: darken;
-    height: 110vh;
+    /* height: 110vh; */
 }
 header .container{
     max-width: var(--width);
@@ -65,7 +65,7 @@ header .navbar ul{
 }
 header .navbar li{
     color: var(--lowwhite);
-    padding: 0 .5rem;
+    padding:  .5rem;
     transition: all .2s ease-in-out;
 
 }
@@ -521,7 +521,7 @@ main .article-6{
         flex-direction: column;
         justify-content: flex-start;
         height: 100vh;
-        background: white;
+        background: rgb(201, 199, 199);
         color: black;
         align-items: flex-start;
         padding-top: 5rem;
@@ -530,6 +530,12 @@ main .article-6{
         min-width: 35vw;
         transform: translateX(275px);
         transition: all .35s ease-in-out;
+    }
+    .mobile-down{
+        background: rgb(94, 93, 93);
+    }
+    .mobile-up{
+        background: white;
     }
     header .navbar li{
         color: black;
